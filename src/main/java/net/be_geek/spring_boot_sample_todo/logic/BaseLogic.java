@@ -5,6 +5,6 @@ import org.slf4j.LoggerFactory;
 
 public abstract class BaseLogic {
 
-	protected Logger logger = LoggerFactory.getLogger(BaseLogic.class);
+	protected final Logger logger = LoggerFactory.getLogger(getClass());
 
 }

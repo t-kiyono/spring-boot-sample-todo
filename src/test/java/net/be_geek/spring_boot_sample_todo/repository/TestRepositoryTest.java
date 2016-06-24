@@ -1,5 +1,8 @@
 package net.be_geek.spring_boot_sample_todo.repository;
 
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
+
 import java.util.List;
 
 import net.be_geek.spring_boot_sample_todo.App;
@@ -26,8 +29,7 @@ public class TestRepositoryTest {
 		testRepo.save(entity);
 
 		List<TestEntity> savedTestList = testRepo.findAll();
-//		assertThat(savedTestList.size(), is(1));
-		System.out.println(savedTestList);
+		assertThat(savedTestList.size(), is(1));
 	}
 
 }
